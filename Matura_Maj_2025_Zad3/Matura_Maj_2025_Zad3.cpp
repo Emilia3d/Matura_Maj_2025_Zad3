@@ -8,9 +8,12 @@
 
 using namespace std; 
 
+ifstream fin("dron_przyklad.txt");
+const int Wier = 10, Kol = 2;
 
-ifstream fin("dron.txt");
-const int Wier = 100, Kol = 2;
+//ifstream fin("dron.txt");
+//const int Wier = 100, Kol = 2;
+
 int Punkty[Wier][Kol];
 
 void WczytajPunkty()
@@ -66,7 +69,7 @@ int main()
                 int xs = Punkty[j][0],ys = Punkty[j][1];
                 int xk = Punkty[k][0],yk = Punkty[k][1];
 
-                if ( xs * 2 == xp + xk && ys * 2 == yp + yk&&xp!=xk){
+                if ( xs * 2 == xp + xk && ys * 2 == yp + yk){// && xp != xk) {
                     cout << "(" << xp << ";" << yp << ")" << "(" << xs << "; " << ys << ")" << "(" << xk << ";" << yk << ")" << endl;
                 }
             }
